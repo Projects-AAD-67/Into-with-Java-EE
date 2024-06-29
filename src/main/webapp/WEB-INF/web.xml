@@ -6,12 +6,20 @@
 
     <servlet-mapping>
         <servlet-name>Demo</servlet-name>
-        <url-pattern>/health</url-pattern>
+        <url-pattern>/demo</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>Demo</servlet-name>
         <servlet-class>lk.ijse.aad._67.intro.Demo</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <load-on-startup>-1</load-on-startup>
     </servlet>
+    <context-param>
+        <param-name>aad</param-name>
+        <param-value>eranga</param-value>
+    </context-param>
+    <context-param>
+        <param-name>home</param-name>
+        <param-value>saman</param-value>
+    </context-param>
 
 </web-app>
