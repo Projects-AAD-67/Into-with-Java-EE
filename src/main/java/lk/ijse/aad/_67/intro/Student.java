@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-@WebServlet(value = "/")
+@WebServlet(value = "/*")
 public class Student extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,6 +22,8 @@ public class Student extends HttpServlet {
         System.out.println("Request URL : "+req.getRequestURL());
         System.out.println("Get Protocol : "+req.getProtocol());
         System.out.println("Get Scheme : "+req.getScheme());
+
+        System.out.println(req.getParameter("name"));
 
     }
 }
