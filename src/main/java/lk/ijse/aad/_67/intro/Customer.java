@@ -20,7 +20,7 @@ public class Customer extends HttpServlet {
         PrintWriter out = resp.getWriter();
         var param1 = req.getParameter("incomingValue1");
         int paramInt1 = Integer.parseInt(param1);
-        var paramInt2 = Integer.parseInt(getServletContext().getInitParameter("vl1"));
+        var paramInt2 = Integer.parseInt(getServletConfig().getInitParameter("vl1"));
         out.write(calcData(paramInt1,paramInt2));
         out.close();
     }
